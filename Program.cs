@@ -7,6 +7,7 @@
         string[] unitOfMeasurement;
         string[] steps;
         double[] initialQuantity;  // add this field to store the original quantity
+      
         public string name { get; set; }
         public List<Ingredient> Ingredients { get; set; }
         private static List<recipe> recs = new List<recipe>();
@@ -118,6 +119,7 @@
         }
         public void RecipeManager()
         {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Welcome to the recipe manager!");
             while (true)
             {
@@ -157,6 +159,7 @@
         }
         private static void AddRecipe()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("\nAdding a new recipe...");
 
             recipe rec = new recipe();
