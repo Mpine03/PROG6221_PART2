@@ -1,6 +1,6 @@
 ﻿namespace recipeApp
 {
-    class recipe
+    class recipe //stores  recipe information
     {
         string[] nameOfIngredient;
         double[] quantity;
@@ -151,12 +151,7 @@
 
 
         }
-        public class Ingredient
-        {
-            public string name { get; set; }
-            public int calories { get; set; }
-            public string foodGroup { get; set; }
-        }
+       
         private static void AddRecipe()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -164,7 +159,7 @@
 
             recipe rec = new recipe();
 
-            Console.WriteLine("Enter the recipe name:");
+            Console.WriteLine("Enter the name of the recipe:");
             rec.name = Console.ReadLine();
 
             while (true)
@@ -233,6 +228,12 @@
                 Console.WriteLine("This recipe exceeds 300 calories");
             }
 
+        }
+         public class Ingredient //stores ingredient info
+        {
+            public string name { get; set; }
+            public int calories { get; set; }
+            public string foodGroup { get; set; }
         }
 
 
