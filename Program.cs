@@ -118,7 +118,7 @@
             unitOfMeasurement = new string[0];
             steps = new string[0];
         }
-        public void RecipeManager()
+        public void RecipeManager() // Shows the recipe manger
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("*************************");
@@ -272,7 +272,7 @@
                     Console.WriteLine("To scale the recipe, enter '3'");
                     Console.WriteLine("To reset the quantity of the ingredients, enter '4'");
                     Console.WriteLine("To clear all the data of the recipe, enter '5'");
-                    Console.WriteLine("To open the recipe manager, enter '6'");
+                    Console.WriteLine("To open the recipe manager, enter '6'"); //new option that views the recipe manger
                     Console.WriteLine("To exit, enter '7'");
                     Console.WriteLine("--------------------------------------------------------------");
 
