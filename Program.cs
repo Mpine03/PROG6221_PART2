@@ -199,7 +199,9 @@
         }
         private static void ViewRecipeList()
         {
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("\nRecipe List:");
+            Console.WriteLine("--------------------------------");
             if (recs.Count == 0)
             {
                 Console.WriteLine("No recipe found.");
