@@ -19,6 +19,7 @@
             quantity = new double[0];
             unitOfMeasurement = new string[0];
             steps = new string[0];
+            
             Ingredients = new List<Ingredient>();
         }
         public void userInput()
@@ -119,11 +120,16 @@
         }
         public void RecipeManager()
         {
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("*************************");
             Console.WriteLine("Welcome to the recipe manager!");
+            Console.WriteLine("*************************");
+
             while (true)
             {
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("\nPlease choose an option:");
+                Console.WriteLine("--------------------------------");
                 Console.WriteLine("1. Add a recipe");
                 Console.WriteLine("2. View recipe list");
                 Console.WriteLine("3. Exit");
