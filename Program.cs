@@ -234,7 +234,7 @@
             Console.WriteLine("--------------------------------");
             foreach (Ingredient ingredient in rec.Ingredients)
             {
-                Console.WriteLine("-" + ingredient.name + "(" + ingredient.calories +"" +"calories,"+"" + ingredient.foodGroup + ")");
+                Console.WriteLine("-" + ingredient.name + "--"+"(" + ingredient.calories +"" +"calories,"+"" + ingredient.foodGroup + ")");
             }
             int totalCalories = rec.Ingredients.Sum(i => i.calories);
             Console.WriteLine("Total Calcories:" + totalCalories);
