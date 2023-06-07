@@ -10,7 +10,7 @@
       
         public string name { get; set; }
         public List<Ingredient> Ingredients { get; set; }
-        private static List<recipe> recs = new List<recipe>();
+        private static List<recipe> recs = new List<recipe>(); //stores the recipes in genetic collections
 
         public recipe()
         {
@@ -207,7 +207,7 @@
                 Console.WriteLine("No recipe found.");
                 return;
             }
-            List<recipe> sortedRecipe = recs.OrderBy(r => r.name).ToList();
+            List<recipe> sortedRecipe = recs.OrderBy(r => r.name).ToList(); 
             foreach (recipe rec in sortedRecipe)
             {
                 Console.WriteLine("-" + rec.name);
