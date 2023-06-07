@@ -160,36 +160,42 @@
        
         private static void AddRecipe()
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\nAdding a new recipe...");
 
             recipe rec = new recipe();
 
-            Console.WriteLine("Enter the name of the recipe:");
+            Console.WriteLine("Enter the recipe name:");
             rec.name = Console.ReadLine();
 
             while (true)
             {
                 Ingredient ingredient = new Ingredient();
 
-                Console.WriteLine("Enter ingredient name(or 'done' to finish):");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Enter ingredient name(or 'quit' to finish):");
+                Console.ForegroundColor = ConsoleColor.Red;
                 string ingredientName = Console.ReadLine();
 
-                if (ingredientName.ToLower() == "done")
+                if (ingredientName.ToLower() == "quit")
                     break;
 
                 ingredient.name = ingredientName;
-
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("Enter ingredient calories:");
+                Console.ForegroundColor = ConsoleColor.Red;
                 ingredient.calories = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Enter ingredient food group");
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Enter ingredient food group:");
+                Console.ForegroundColor = ConsoleColor.Red;
                 ingredient.foodGroup = Console.ReadLine();
 
                 rec.Ingredients.Add(ingredient);
             }
             recs.Add(rec);
-            Console.WriteLine("Recipe added successfully");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("RECIPE SUCESSFULLY ADDED!!!");
         }
         private static void ViewRecipeList()
         {
